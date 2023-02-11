@@ -21,13 +21,15 @@ class Conta:
     def get_saldo(self):
         return self.__saldo
 
-    def get_limite(self):
-        return self.__limite
-
     def get_titular(self):
         return self.__titular
 
-    def set_limite(self, limite):
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter    #  aqui estamos usando o get, usando o property
+    def limite(self, limite):
         self.__limite = limite
 
 
