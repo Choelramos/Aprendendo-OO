@@ -25,11 +25,16 @@ class Filme(Programa):
         super().__init__(nome, ano)
         self.duracao = duracao
 
+    def imprime(self):
+        print(f'{self.nome} - {self.ano} - {self.duracao} min')
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporada):
         super().__init__(nome, ano)
         self.temporada = temporada
+
+    def imprime(self):
+        print(f'{self.nome} - {self.ano} - {self.temporada} temporadas')
 
 
 vingadores = Filme("Vingadores - guerra infinita", 2019, 160)
@@ -39,14 +44,9 @@ vingadores.dar_like()
 vingadores.dar_like()
 breakingbad.dar_like()
 
-print(f' Nome: {vingadores.nome} - Ano: {vingadores.ano}'
-      f' - Duração: {vingadores.duracao} - Likes: {vingadores.likes}')
-print(f'Nome: {breakingbad.nome} - Ano: {breakingbad.ano}'
-      f' - Temporadas: {breakingbad.temporada} - Likes: {breakingbad.likes}')
 
 filmes_e_series = [vingadores, breakingbad]
 
 for programa in filmes_e_series:
-    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporada  # aqui estamos verificando se o atributo duração está em programa, caso contrario é temporada
-    print(f'{programa.nome} - {detalhes} D - {programa.likes}')
+    programa.imprime()
 
