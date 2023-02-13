@@ -1,16 +1,15 @@
 class Programa:
     def __init__(self, nome, ano):
-        self.__nome = nome.title()
+        self._nome = nome.title()
         self.ano = ano
-        self.__likes = 0
+        self._likes = 0
 
     @property
     def likes(self):
-        return self.__likes
-
+        return self._likes
 
     def dar_like(self):
-        self.__likes += 1
+        self._likes += 1
 
     @property
     def nome(self):
@@ -40,9 +39,9 @@ vingadores.dar_like()
 vingadores.dar_like()
 breakingbad.dar_like()
 
-print(f' Nome: {vingadores.nome}, Ano: {vingadores.ano}, Duração: {vingadores.duracao} Likes: {vingadores.likes}')
+print(f' Nome: {vingadores.nome} - Likes: {vingadores.likes}')
 
-print(f'Nome: {breakingbad.nome} Ano: {breakingbad.ano}, Temporadas: {breakingbad.temporada} Likes: {breakingbad.likes}')
+print(f'Nome: {breakingbad.nome} - Likes: {breakingbad.likes}')
 
 
 
