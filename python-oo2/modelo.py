@@ -45,7 +45,12 @@ print(f'Nome: {breakingbad.nome} - Ano: {breakingbad.ano}'
       f' - Temporadas: {breakingbad.temporada} - Likes: {breakingbad.likes}')
 
 
+filmes_e_series = [vingadores, breakingbad]
 
+
+for programa in filmes_e_series:
+    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporada
+    print(f'{programa.nome} - {detalhes} D - {programa.likes}')
 
 
 
