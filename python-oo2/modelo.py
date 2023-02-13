@@ -39,9 +39,11 @@ vingadores.dar_like()
 vingadores.dar_like()
 breakingbad.dar_like()
 
-print(f' Nome: {vingadores.nome} - Likes: {vingadores.likes}')
+print(f' Nome: {vingadores.nome} - Ano: {vingadores.ano}'
+      f' - Duração: {vingadores.duracao} - Likes: {vingadores.likes}')
+print(f'Nome: {breakingbad.nome} - Ano: {breakingbad.ano}'
+      f' - Temporadas: {breakingbad.temporada} - Likes: {breakingbad.likes}')
 
-print(f'Nome: {breakingbad.nome} - Likes: {breakingbad.likes}')
 
 
 
