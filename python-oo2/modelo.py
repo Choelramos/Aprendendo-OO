@@ -25,17 +25,16 @@ class Filme(Programa):
         super().__init__(nome, ano)
         self.duracao = duracao
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.duracao} min')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.duracao} min'  # o '__str__' vai retornar o valor como uma string
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporada):
         super().__init__(nome, ano)
         self.temporada = temporada
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.temporada} temporadas')
-
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.temporada} temporadas'
 
 vingadores = Filme("Vingadores - guerra infinita", 2019, 160)
 breakingbad = Serie("breaking bad", 2008, 5)
@@ -44,9 +43,8 @@ vingadores.dar_like()
 vingadores.dar_like()
 breakingbad.dar_like()
 
-
 filmes_e_series = [vingadores, breakingbad]
 
 for programa in filmes_e_series:
-    programa.imprime()
+    print(programa)
 
