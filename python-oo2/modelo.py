@@ -19,6 +19,8 @@ class Programa:
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
 
+    def __str__(self):
+        return f'{self._nome} - {self.ano} - {self._likes} Likes'
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
@@ -28,6 +30,7 @@ class Filme(Programa):
     def __str__(self):
         return f'{self.nome} - {self.ano} - {self.duracao} min'  # o '__str__' vai retornar o valor como uma string
 
+
 class Serie(Programa):
     def __init__(self, nome, ano, temporada):
         super().__init__(nome, ano)
@@ -35,6 +38,7 @@ class Serie(Programa):
 
     def __str__(self):
         return f'{self.nome} - {self.ano} - {self.temporada} temporadas'
+
 
 vingadores = Filme("Vingadores - guerra infinita", 2019, 160)
 breakingbad = Serie("breaking bad", 2008, 5)
