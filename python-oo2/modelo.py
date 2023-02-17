@@ -41,19 +41,21 @@ class Serie(Programa):
         return f'{self.nome} - {self.ano} - {self.temporada} temporadas'
 
 
-class Playlist():
+class Playlist:
     def __init__(self, nome, programas):
         self.nome = nome
         # super().__init__(programas)  # chamando a função list e passando um parâmetro
-        self._programs = programas
+        self._programas = programas
+
+    def __getitem__(self, item):
+        return self._programas[item]
 
     @property
     def listagem(self):
-        return self._programs
+        return self._programas
 
-    @property
-    def tamanho(self):
-        return len(self._programs)
+    def __len__(self):
+        return len(self._programas)
 
 vingadores = Filme("Vingadores - guerra infinita", 2019, 160)
 breakingbad = Serie("breaking bad", 2008, 5)
@@ -81,9 +83,9 @@ minha_playlist = Playlist("fim_de_semana", filmes_e_series)
 
 # Mostrando na tela:
 
-print(f'Tem o filme vingadores na lista? {vingadores in minha_playlist.listagem}')
-print(f'Quantidade de programas: {len(minha_playlist.listagem)}')
+print(f'Tem o filme vingadores na lista? {vingadores in minha_playlist}')
+print(f'Quantidade de programas: {len(minha_playlist)}')
 
-for programa in minha_playlist.listagem:
+for programa in minha_playlist:
     print(programa)
 
