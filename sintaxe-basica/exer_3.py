@@ -20,12 +20,20 @@
 
 # implementação com maps
 
+# lista = [1, 2, 3, 4, 5]
+#
+#
+# def triplica_item(item):
+#     return item*3
+#
+#
+# nova_lista = map(triplica_item, lista)
+# print(list(nova_lista))
+
+# aplicando lambda
+
 lista = [1, 2, 3, 4, 5]
 
+nova_lista = map(lambda item: item * 3, lista)
 
-def triplica_item(item):
-    return item*3
-
-
-nova_lista = map(triplica_item, lista)
 print(list(nova_lista))
