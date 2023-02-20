@@ -13,16 +13,24 @@
 
 # transformando todos os nomes em maiúsculo
 
-veiculos = ['avião', 'carro', 'navio', 'onibus']
+# veiculos = ['avião', 'carro', 'navio', 'onibus']
+#
+#
+# def letras_maiusculas(itens):
+#     return itens.upper()
+#
+#
+# carros = map(letras_maiusculas, veiculos)
+# print(list(carros))
 
+# -------------------------------------------------------------------------------------------------
 
-def letras_maiusculas(itens):
-    return itens.upper()
+# imprimindo apenas números pares:
 
+lista = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
-carros = map(letras_maiusculas, veiculos)
-print(list(carros))
-
+pares = filter(lambda item: item % 2 == 0, lista)
+print(list(pares))
 
 
 
