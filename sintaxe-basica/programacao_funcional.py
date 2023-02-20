@@ -35,10 +35,20 @@
 # -------------------------------------------------------------------------------------------------
 # Arredondando os valores da lista de números na mesma ordem da lista de precisão:
 
-lista_numeros = [9.15613, 7.84651, 3.00123, 6.5648]
-lista_precisao = [2, 2, 3, 3]
+# lista_numeros = [9.15613, 7.84651, 3.00123, 6.5648]
+# lista_precisao = [2, 2, 3, 3]
+#
+# arredondamento = lambda x, y: round(x, y)
+#
+# resultado = list(map(arredondamento, lista_numeros, lista_precisao))
+# print(resultado)
 
-arredondamento = lambda x, y: round(x, y)
+# -------------------------------------------------------------------------------------------------
+# Somando todos os elementos da lista:
+from functools import reduce
 
-resultado = list(map(arredondamento, lista_numeros, lista_precisao))
+fun_soma = lambda x, y: x+y
+
+numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+resultado = reduce(fun_soma, numero)
 print(resultado)
