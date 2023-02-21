@@ -23,11 +23,11 @@ def contador2(n):
 x = threading.Thread(target=contador1, args=(5, ))
 x.start()
 
-x.join()
+x.join()  # Vamos fizalizar primeiro a thread, depois vamos para a outra.
 
 y = threading.Thread(target=contador2, args=(10, ))
 y.start()
 
-y.join()
+y.join()  # Nosso join() vai garantir que o print vai ser inicializado, somente quando as threads forem finalizadas.
 
 print(lista)
