@@ -45,10 +45,11 @@
 
 # -------------------------------------------------------------------------------------------------
 # Somando todos os elementos da lista:
-from functools import reduce
+# from functools import reduce
+#
+# fun_soma = lambda x, y: x+y
+#
+# numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# resultado = reduce(fun_soma, numero)
+# print(resultado)
 
-fun_soma = lambda x, y: x+y
-
-numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-resultado = reduce(fun_soma, numero)
-print(resultado)
